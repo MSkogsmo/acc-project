@@ -255,5 +255,5 @@ latex = latexTable(input);
 %Adding tic toc for my own testing /Markus
 tic_toc_list(7) = [toc];
 tic_toc_list_names =[];
-tic_toc_list_names = ["Problem 1 a) I", "Problem 1 b) I", "Problem 1 c) I", "Problem 1 a) II", "Problem 1 a) II", "Problem 1 a) II", "LastPart"];
+tic_toc_list_names = ["Problem 1 a) I", "Problem 1 b) I", "Problem 1 c) I", "Problem 1 a) II", "Problem 1 a) II", 'Problem 1 a) II', 'LastPart'];
 display_tic_toc_list = [tic_toc_list_names; tic_toc_list]
