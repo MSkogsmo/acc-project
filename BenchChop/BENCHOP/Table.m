@@ -245,10 +245,10 @@ input.transposeTable = 1;
 input.tableColumnAlignment = 'c';
 
 % Switch table borders on/off:
-input.tableBorders = 0;
+input.tableBorders = 1;
 
 % Switch to generate a complete LaTex document or just a table:
-input.makeCompleteLatexDocument = 0;
+input.makeCompleteLatexDocument = 1;
 
 latex = latexTable(input);
 
