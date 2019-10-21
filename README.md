@@ -29,7 +29,6 @@ You simply go into the /flask and /celery
 build them again and push them to dockerhub then change the compose file to fetch the new ones. 
 
 to run it on the cloud:
-remove the comments # in the compose file
 >curl -fsSL https://get.docker.com -o get-docker.sh
 
 >sh get-docker.sh
