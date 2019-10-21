@@ -2,8 +2,10 @@
 This works on linux:
 on mac there is docker for mac.
 
->curl -fsSL https://get.docker.com -o get-docker.sh
+>curl -fsSL https://get.docker.com -o get-docker.sh 
+
 >sh get-docker.sh
+
 Run it:
 > docker-compose up -d
 
