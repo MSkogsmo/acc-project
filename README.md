@@ -11,7 +11,9 @@ Run it:
 
 see if they are running:
 > docker-compose ps
+
 test it:
+
 localhost:5000/add/5/10
 
 we need to change the app.py in /flask & tasks.py in /celery.
