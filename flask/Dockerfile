@@ -10,8 +10,8 @@ ENV HOST 0.0.0.0
 ENV PORT 5000
 ENV DEBUG true
 
-COPY . /flask-app
-WORKDIR /flask-app
+COPY . /flask
+WORKDIR /flask
 
 RUN pip install -r requirements.txt
 
