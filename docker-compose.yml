@@ -1,7 +1,7 @@
 version: '3'
 services:
   flask:
-    image: forssellm/flaskapp
+    image: forssellm/flask
     build:
       context: ./flask
       dockerfile: Dockerfile
@@ -11,7 +11,7 @@ services:
     depends_on:
       - redis
   celery:
-    image: forssellm/flaskcelery 
+    image: forssellm/cellery 
     build:
       context: ./celery
       dockerfile: Dockerfile

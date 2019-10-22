@@ -1,6 +1,7 @@
 import os
 import time
 from celery import Celery
+import subprocess
 
 env=os.environ
 CELERY_BROKER_URL=env.get('CELERY_BROKER_URL','redis://localhost:6379'),
@@ -13,6 +14,9 @@ celery= Celery('tasks',
 
 
 @celery.task(name='mytasks.add')
-def add(x, y):
-    time.sleep(5) # lets sleep for a while before doing the gigantic addition task!
-    return x + y
+def add(x):
+    result = subprocess.check_output('echo "tablee({})" | octave'.format(x), shell=True) 
+    print(result)
+    return result  
+    
+    
