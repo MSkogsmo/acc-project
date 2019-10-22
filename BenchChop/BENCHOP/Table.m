@@ -5,9 +5,8 @@
 %Since using a scalable method one worker till take on at most one
 %problem_to_solve
 
-function [display_tic_toc_list] = Table(problem_to_solve)
+function [time, relerr] = Table(problem_to_solve)
 %Adding tic toc for my own testing and to make sure the right problem_to_solve is computed/Markus
-tic_toc_list = [0,0,0,0,0,0];
 
 format long
 warning off
@@ -20,7 +19,6 @@ Methods={'MC','MC-S','QMC-S','MLMC','MLMC-A',...
 
 %% Problem 1 a) I
 if any(problem_to_solve(:) == 1)
-    tic
     display('Problem 1 a) I');
     rootpath=pwd;
     S=[90,100,110]; K=100; T=1.0; r=0.03; sig=0.15;
@@ -42,11 +40,11 @@ if any(problem_to_solve(:) == 1)
         end
     end
     cd(rootpath);
-    tic_toc_list(1) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
 
 %% Problem 1 b) I
 elseif any(problem_to_solve(:) == 2)
-    tic
     display('Problem 1 b) I');
     rootpath=pwd;
     S=[90,100,110]; K=100; T=1.0; r=0.03; sig=0.15;
@@ -68,11 +66,11 @@ elseif any(problem_to_solve(:) == 2)
         end
     end
     cd(rootpath);
-    tic_toc_list(2) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
 
 %% Problem 1 c) I
 elseif any(problem_to_solve(:) == 3)
-    tic
     display('Problem 1 c) I');
     rootpath=pwd;
     S=[90,100,110]; K=100; T=1.0; r=0.03; sig=0.15; B=1.25*K;
@@ -94,11 +92,11 @@ elseif any(problem_to_solve(:) == 3)
         end
     end
     cd(rootpath);
-    tic_toc_list(3) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
 
 %% Problem 1 a) II
 elseif any(problem_to_solve(:) == 4)
-    tic
     display('Problem 1 a) II');
     rootpath=pwd;
     S=[97,98,99]; sig=0.01; r=0.1; T=0.25; K=100;
@@ -120,12 +118,12 @@ elseif any(problem_to_solve(:) == 4)
         end
     end
     cd(rootpath);
-    tic_toc_list(4) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
 
 %% Problem 1 b) II
 elseif any(problem_to_solve(:) == 5)
     %Adding tic toc for my own testing /Markus
-    tic
     display('Problem 1 b) II');
     rootpath=pwd;
     S=[97,98,99]; K=100; T=0.25; r=0.1; sig=0.01;
@@ -147,11 +145,11 @@ elseif any(problem_to_solve(:) == 5)
         end
     end
     cd(rootpath);
-    tic_toc_list(5) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
     
 %% Problem 1 c) II
 elseif any(problem_to_solve(:) == 6)
-    tic
     display('Problem 1 c) II');
     rootpath=pwd;
     S=[97,98,99]; sig=0.01; r=0.1; T=0.25; K=100; B=1.25*K;
@@ -173,13 +171,12 @@ elseif any(problem_to_solve(:) == 6)
         end
     end
     cd(rootpath);
-    tic_toc_list(6) = [toc];
+    time = timeBSeuCallUI;
+    relerr = relerrBSeuCallUI;
 end
 
 %The original outputs
 %Table2=table(tBSeuCallUI,tBSamPutUI,tBSupoutCallI,tBSeuCallUII,tBSamPutUII,tBSupoutCallII,'RowNames',Methods);
 %err=[rBSeuCallUI,rBSamPutUI,rBSupoutCallI,rBSeuCallUII,rBSamPutUII,rBSupoutCallII];
 %err=round(log10(err));
-
-tic_toc_list_names = ["Problem 1 a) I", "Problem 1 b) I", "Problem 1 c) I", "Problem 1 a) II", "Problem 1 a) II", "Problem 1 a) II"];
-display_tic_toc_list = [tic_toc_list_names; tic_toc_list]
+endfunction
