@@ -29,6 +29,7 @@ build them again and push them to dockerhub. Make sure to remove cached images i
 
 to run it on the cloud:
 >curl -fsSL https://get.docker.com -o get-docker.sh
+
 >sh get-docker.sh
 > https://github.com/MSkogsmo/acc-project
 
