@@ -1,6 +1,4 @@
-Install docker however you like.
-This works on linux:
-on mac there is docker for mac.
+Install docker however you like, on ubuntu:
 
 >curl -fsSL https://get.docker.com -o get-docker.sh 
 
