@@ -16,24 +16,27 @@ test it:
 
 localhost:5000/add/5/10
 
-we need to change the app.py in /flask & tasks.py in /celery.
 
-scale it does not work locally but it does on the swarm.
-docker-compose scale web=5
 
 2. init the swarm
 >Docker swarm init —advertise-adds <—ip —>
 
 join the other nodes (use the tokens)
 
-to make sure our changes in tasks and app is seen we need to replace the dockerfiles on the dockerhub, I can do that or teach you.
+To make changes,
 You simply go into the /flask and /celery
-build them again and push them to dockerhub then change the compose file to fetch the new ones. 
+build them again and push them to dockerhub. Make sure to remove cached images if there are any.
 
 to run it on the cloud:
 >curl -fsSL https://get.docker.com -o get-docker.sh
-
 >sh get-docker.sh
+> https://github.com/MSkogsmo/acc-project
 
->docker stack deploy -c <---file---> celeryapp
+go into the cloned directory 
+>docker stack deploy -c . Benchop
+
+To scale:
+>docker service scale <--name of worker-->= N 
+
+
 
