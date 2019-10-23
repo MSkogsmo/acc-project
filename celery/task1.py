@@ -24,7 +24,7 @@ def add(x):
 def run_benchmark(problem,K,T,r,sig):
     """Run benchmark and return the result as a dictionary"""
     #import function run_methods from TTable.m
-    filepaths, runtime, relerr =octave.newtable(problem,K,T,r,sig, nout=3)
+    filepaths, runtime, relerr =octave.TTable(problem,K,T,r,sig, nout=3)
     #https://stackoverflow.com/questions/952914/how-to-make-a-flat-list-out-of-list-of-lists
     runtime_list = [item for sublist in runtime.tolist() for item in sublist]
     relerr_list = [item for sublist in relerr.tolist() for item in sublist]
