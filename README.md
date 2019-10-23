@@ -31,7 +31,8 @@ to run it on the cloud:
 >curl -fsSL https://get.docker.com -o get-docker.sh
 
 >sh get-docker.sh
-> https://github.com/MSkogsmo/acc-project
+
+>git clone https://github.com/MSkogsmo/acc-project
 
 go into the cloned directory 
 >docker stack deploy -c . Benchop
