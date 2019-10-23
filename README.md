@@ -1,4 +1,4 @@
-1. Install docker however you like.
+Install docker however you like.
 This works on linux:
 on mac there is docker for mac.
 
@@ -6,7 +6,12 @@ on mac there is docker for mac.
 
 >sh get-docker.sh
 
-Run it:
+Run it locally:
+
+>git clone https://github.com/MSkogsmo/acc-project
+
+go into the acc-project
+
 > docker-compose up -d
 
 see if they are running:
@@ -14,11 +19,11 @@ see if they are running:
 
 test it:
 
-localhost:5000/add/5/10
+localhost:5000/add/5/
 
 
+Run it on the cloud:
 
-init the swarm
 >Docker swarm init —advertise-addr <—ip —>
 
 >curl -fsSL https://get.docker.com -o get-docker.sh
