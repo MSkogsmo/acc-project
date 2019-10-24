@@ -11,7 +11,7 @@ services:
     depends_on:
       - redis
   celery:
-    image: forssellm/cellery 
+    image: forssellm/celery 
     build:
       context: ./celery
       dockerfile: Dockerfile

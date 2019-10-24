@@ -12,10 +12,7 @@ format long
 warning off
 % addpath(genpath('./')); %adds all the functions from subfolders to the path
 % mfiles=getfilenames('./','BSeuCallU*.m')
-Methods={'MC','MC-S','QMC-S','MLMC','MLMC-A',...
-    'FFT','FGL','COS',...
-    'FD','FD-NU','FD-AD',...
-    'RBF','RBF-FD','RBF-PUM','RBF-LSML','RBF-AD','RBF-MLT'};
+Methods={'FD','COS','RBF-FD'};
 
 %% Problem 1 a) I
 if any(problem_to_solve(:) == 1)

@@ -13,8 +13,8 @@ celery= Celery('tasks',
                 backend=CELERY_RESULT_BACKEND)
 
 
-@celery.task(name='mytasks.add')
-def add(x):
+@celery.task(name='mytasks.benchmark')
+def benchmark(x):
     result = subprocess.check_output('echo "tablee({})" | octave'.format(x), shell=True) 
     print(result)
     return result  
