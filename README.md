@@ -33,7 +33,13 @@ see if they are running:
 
 test it:
 
-localhost:5000/benchmark/<--problem1-6>
+localhost:5000/benchmark/1
+
+localhost:5000/benchmark/2
+
+...
+
+localhost:5000/benchmark/6
 
 Run it on the cloud:
 (install from above)
