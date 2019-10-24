@@ -22,9 +22,13 @@ In ubuntu:
 Run it locally on a computer with docker-compose and docker. (Make sure you are running terminal in as root.)
 
 >git clone https://github.com/MSkogsmo/acc-project
+
 >cd acc-project
+
 > docker-compose up -d
+
 see if they are running:
+
 > docker-compose ps
 
 test it:
